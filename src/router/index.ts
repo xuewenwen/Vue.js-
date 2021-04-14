@@ -9,12 +9,13 @@ import Labels from '@/views/Labels.vue'
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import Statistics from '@/views/Statistics.vue'
+import NotFound from '@/views/NotFound.vue'
 Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
   {
     path: '/',
-    component: Money
+    redirect: '/money'
   },
   {
     path: '/money',
@@ -27,6 +28,10 @@ const routes: Array<RouteConfig> = [
   {
     path: '/statistics',
     component: Statistics
+  },
+  {
+    path: '*',
+    component: NotFound
   }
 
 ]
